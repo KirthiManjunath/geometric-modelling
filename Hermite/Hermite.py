@@ -10,7 +10,7 @@ class hermite:
         self.C2continuity()
 
     def hermite_basis(self):
-        t = np.arange(0,1,0.01)
+        t = np.arange(0,1.01,0.01)
         h1 = 2*t**3 - 3*t**2 + 1
         h2 = -2*t**3 + 3*t**2 
         h3 = t**3 -2*t**2 + t
