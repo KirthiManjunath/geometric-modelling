@@ -21,9 +21,10 @@ class hermite:
         if self.prev == None:
             return
         else:
-            self.p0 = self.prev.p1
-            self.m0 = self.prev.m1
-            self.m1 = 3*self.p1 - 3*self.prev.p0 - self.prev.m0 - 4*self.m0
+            self.p0 = self.prev.p1 #C0 continuity
+            self.m0 = self.prev.m1 #C1 continuity
+            self.m1 = 3*self.p1 - 3*self.prev.p0 - self.prev.m0 - 4*self.m0 #C2 continuity
+        self.m1 = self.m1 / self.prev.m1 if self.prev.m1!= 0 else 1
         
     
     
